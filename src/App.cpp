@@ -1,7 +1,7 @@
 #include "App.hpp"
 
 void App::onSetup() {
-
+    window->bindEmbeddedLuaScript<"src/ui/main.lua">();
 }
 
 void App::onUpdate() {
