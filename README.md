@@ -1,2 +1,2 @@
 # b-calc
-A Battery-based calculator app, designed to just work
+A Battery-based cross-platform calculator app, designed to just work
