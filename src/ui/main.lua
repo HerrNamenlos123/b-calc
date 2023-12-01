@@ -1,23 +1,28 @@
 
-local i = 0
-local frame = false
+function numberInput(number)
+    print("Numberinput: " .. number)
+end
+
+function numberFields()
+
+    function drawGrid(row,column)
+        local number = row*3 + column + 1
+        if Button({text=number, margin="5%" }) then
+            numberInput(number)
+        end
+    end
+
+    Grid({rows=3, columns=3, width="100%", height="100%"}, drawGrid)
+end
 
 function mainWindow()
-    if Button({text="Click me!"}) then
-        print("Clicked")
-        frame = not frame
-        b.requestAnimationFrameIn(0)
-    end
-    ImGui.Text(""..i)
-    i = i + 1
+    numberFields()
 end
 
 function render()
     ImGui.ShowDemoWindow()
 
-    if frame then
-        b.requestAnimationFrameIn(0)
-    end
+    --b.requestAnimationFrameIn(0)
 
     Window({title="Main Window"}, mainWindow)
 end
