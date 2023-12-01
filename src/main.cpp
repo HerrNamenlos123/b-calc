@@ -1,8 +1,7 @@
 
 #include "App.hpp"
 
-int main(int argc, const char** argv)
-{
+int main(int argc, char* argv[]) {
     App app;
     return app.run("b-calc", argc, argv);
 }
